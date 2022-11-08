@@ -1,6 +1,8 @@
 # flutter_suhu
 
-A new Flutter project.
+Tugas Mobile Flutter 2 - Konversi Suhu
+
+![image](https://user-images.githubusercontent.com/86558365/200468766-56c0f050-5810-4d0a-846f-195637ba581b.png)
 
 ## Getting Started
 
