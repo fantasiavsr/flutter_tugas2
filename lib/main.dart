@@ -45,6 +45,12 @@ class _HomeState extends State<Home> {
   double _reamur = 0;
   int _count = 0;
 
+  // final inputController = TextEditingController();
+  String _newValue = "Kelvin";
+  double _result = 0;
+
+  var listItem = ["Kelvin", "Reamur"];
+
   TextEditingController myController = TextEditingController();
 
   void _conversionState() {
@@ -78,6 +84,20 @@ class _HomeState extends State<Home> {
               decoration: const InputDecoration(
                   hintText: "Masukkan Suhu dalam Celcius",
                   contentPadding: EdgeInsets.all(8)),
+            ),
+            DropdownButton<String>(
+              items: listItem.map((String value) {
+                return DropdownMenuItem<String>(
+                  value: value,
+                  child: Text(value),
+                );
+              }).toList(),
+              value: _newValue,
+              onChanged: (String? changeValue) {
+                setState(() {
+                  _newValue = changeValue.toString();
+                });
+              },
             ),
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceAround,
